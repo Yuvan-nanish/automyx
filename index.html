@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automyx – AI-powered automation, secure data solutions, and smart digital systems designed to scale your business." />
+  <title>Automyx – Automating Intelligence. Securing the Future.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div id="loader" role="status" aria-label="Loading Automyx">
+    <div class="loader-inner">
+      <svg class="loader-logo-svg" viewBox="0 0 120 40" aria-hidden="true">
+        <text x="0" y="32" class="loader-svg-text">Automyx</text>
+      </svg>
+      <div class="loader-line"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-wrap">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="url(#ng)" stroke-width="1.5"/>
+            <path d="M10 16 L16 10 L22 16 L16 22 Z" fill="url(#ng)" opacity="0.8"/>
+            <circle cx="16" cy="16" r="3" fill="white"/>
+            <defs>
+              <linearGradient id="ng" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>Automyx</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nl">About</a></li>
+        <li><a href="#services" class="nl">Services</a></li>
+        <li><a href="#why" class="nl">Why Us</a></li>
+        <li><a href="#projects" class="nl">Work</a></li>
+        <li><a href="#process" class="nl">Process</a></li>
+        <li><a href="#contact" class="nl">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#contact" class="btn-nav" id="nav-cta-btn">Get Started</a>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" aria-label="Hero">
+    <!-- Interactive AI canvas - users can drag nodes -->
+    <canvas id="hero-canvas" aria-label="Interactive AI neural network visualization"></canvas>
+
+    <!-- Ambient sky layers -->
+    <div class="sky-layer sky-1" aria-hidden="true"></div>
+    <div class="sky-layer sky-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        AI · Automation · Security
+      </div>
+      <h1 class="hero-h1 reveal-up d1">
+        We Build Systems<br/>
+        <em>That Think For You</em>
+      </h1>
+      <p class="hero-p reveal-up d2">
+        AI-powered automation and secure digital infrastructure,<br class="hide-mobile"/>
+        designed to scale your business intelligently.
+      </p>
+      <div class="hero-btns reveal-up d3">
+        <a href="#contact" class="btn-primary" id="hero-start">
+          Get Started
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#projects" class="btn-outline" id="hero-work">View Our Work</a>
+      </div>
+      <div class="hero-hint reveal-up d4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18l3-3-3-3M15 18l3-3-3-3" opacity="0.4"/><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0" opacity="0.2"/></svg>
+        Drag the nodes above to interact
+      </div>
+    </div>
+
+    <div class="hero-stats reveal-up d5">
+      <div class="hs-item">
+        <span class="hs-num" data-target="50">0</span><span class="hs-suf">+</span>
+        <span class="hs-label">Projects</span>
+      </div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item">
+        <span class="hs-num" data-target="99">0</span><span class="hs-suf">%</span>
+        <span class="hs-label">Uptime</span>
+      </div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item">
+        <span class="hs-num" data-target="30">0</span><span class="hs-suf">+</span>
+        <span class="hs-label">Clients</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-track">
+        <div class="scroll-thumb"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section" aria-label="About Automyx">
+    <div class="about-bg-shape" aria-hidden="true"></div>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-eyebrow reveal-up">About Us</p>
+          <h2 class="section-h2 reveal-up d1">Who We Are</h2>
+          <p class="section-body reveal-up d2">
+            Automyx is a next-generation technology startup building AI-driven automation systems and secure digital infrastructures. We help businesses eliminate manual work, sharpen decision-making, and protect sensitive data with intelligent solutions.
+          </p>
+          <p class="section-body reveal-up d3">
+            Our engineers, data scientists, and security specialists collaborate to deliver technology that doesn't just solve today's problems — it anticipates tomorrow's.
+          </p>
+          <div class="about-tags reveal-up d4">
+            <span class="tag">AI-First</span>
+            <span class="tag">Security-Focused</span>
+            <span class="tag">Scalable</span>
+            <span class="tag">Real-World Impact</span>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="about-card-stack">
+            <div class="acard acard-main">
+              <div class="acard-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="20" stroke="url(#abg)" stroke-width="1.5"/>
+                  <path d="M16 24l5 5 11-11" stroke="url(#abg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                    <linearGradient id="abg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <div class="acard-title">AI Automation Engine</div>
+                <div class="acard-sub">Reduce manual workloads by up to 90%</div>
+              </div>
+            </div>
+            <div class="acard acard-2">
+              <div class="acard-stat">99.9%</div>
+              <div class="acard-statlabel">System Uptime</div>
+              <div class="acard-bar"><div class="acard-fill" style="--p:99.9%"></div></div>
+            </div>
+            <div class="acard acard-3">
+              <div class="acard-dot active" aria-hidden="true"></div>
+              <span>All Systems Operational</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services" class="section services-section" aria-label="Services">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow reveal-up">What We Do</p>
+        <h2 class="section-h2 reveal-up d1">Our Services</h2>
+        <p class="section-sub reveal-up d2">Intelligence-first solutions, built for scale.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="svc-card reveal-up d1">
+          <div class="svc-num" aria-hidden="true">01</div>
+          <div class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="4" y="12" width="32" height="22" rx="4" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M14 12V9a6 6 0 0 1 12 0v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="20" cy="23" r="3.5" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M20 20v-5M17 23h-4M27 23h-4M20 26v3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">AI Automation</h3>
+          <p class="svc-body">We automate repetitive business processes using intelligent AI systems, freeing your team for high-value work.</p>
+          <div class="svc-tags">
+            <span>Machine Learning</span><span>RPA</span><span>Workflow AI</span>
+          </div>
+          <div class="svc-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="svc-card reveal-up d2">
+          <div class="svc-num" aria-hidden="true">02</div>
+          <div class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="3" y="6" width="34" height="23" rx="4" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M13 29v4M27 29v4M8 33h24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M11 18l4 3 4-8 4 5 4-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Smart Web Applications</h3>
+          <p class="svc-body">Modern, scalable platforms integrated with AI capabilities, analytics, and real-time processing.</p>
+          <div class="svc-tags">
+            <span>React</span><span>Node.js</span><span>AI APIs</span>
+          </div>
+          <div class="svc-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="svc-card reveal-up d3">
+          <div class="svc-num" aria-hidden="true">03</div>
+          <div class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M20 3L6 9v12c0 9.5 6.3 17 14 18.5C27.7 38 34 30.5 34 21V9L20 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Data Security & Encryption</h3>
+          <p class="svc-body">Advanced encryption, zero-trust architectures, and privacy-first engineering to protect your critical data.</p>
+          <div class="svc-tags">
+            <span>Encryption</span><span>Zero Trust</span><span>Compliance</span>
+          </div>
+          <div class="svc-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="svc-card reveal-up d4">
+          <div class="svc-num" aria-hidden="true">04</div>
+          <div class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M20 3v6M20 31v6M3 20h6M31 20h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8.5 8.5l4.3 4.3M27.2 27.2l4.3 4.3M8.5 31.5l4.3-4.3M27.2 12.8l4.3-4.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Custom AI Solutions</h3>
+          <p class="svc-body">From predictive models to NLP and computer vision, tailored AI built for your specific challenges.</p>
+          <div class="svc-tags">
+            <span>NLP</span><span>Computer Vision</span><span>Predictive AI</span>
+          </div>
+          <div class="svc-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY US ═══ -->
+  <section id="why" class="section why-section" aria-label="Why Automyx">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-left">
+          <p class="section-eyebrow reveal-up">Why Us</p>
+          <h2 class="section-h2 reveal-up d1">Why Choose<br/>Automyx</h2>
+          <p class="section-body reveal-up d2">
+            We're not just another tech vendor. We're a partner committed to delivering measurable outcomes through intelligent, well-crafted systems.
+          </p>
+          <a href="#contact" class="btn-primary sm reveal-up d3" id="why-cta">Start a Project</a>
+        </div>
+        <div class="why-right">
+          <div class="why-feat reveal-up d1">
+            <div class="wf-num" aria-hidden="true">01</div>
+            <div>
+              <h4>AI-First Approach</h4>
+              <p>Intelligence isn't bolted on — it's the foundation of everything we design.</p>
+            </div>
+          </div>
+          <div class="why-feat reveal-up d2">
+            <div class="wf-num" aria-hidden="true">02</div>
+            <div>
+              <h4>Secure by Design</h4>
+              <p>Security is embedded from the first line of code, not added as an afterthought.</p>
+            </div>
+          </div>
+          <div class="why-feat reveal-up d3">
+            <div class="wf-num" aria-hidden="true">03</div>
+            <div>
+              <h4>Scalable Architecture</h4>
+              <p>Systems built to grow from startup to enterprise without re-engineering.</p>
+            </div>
+          </div>
+          <div class="why-feat reveal-up d4">
+            <div class="wf-num" aria-hidden="true">04</div>
+            <div>
+              <h4>Fast Deployment</h4>
+              <p>Streamlined delivery gets you from kickoff to production in record time.</p>
+            </div>
+          </div>
+          <div class="why-feat reveal-up d5">
+            <div class="wf-num" aria-hidden="true">05</div>
+            <div>
+              <h4>Real-World Impact</h4>
+              <p>We measure success by business outcomes, not lines of code shipped.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section" aria-label="Portfolio">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow reveal-up">Portfolio</p>
+        <h2 class="section-h2 reveal-up d1">Our Work</h2>
+        <p class="section-sub reveal-up d2">Real solutions, real impact.</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="proj-card large reveal-up d1" id="proj-1">
+          <div class="proj-visual pv-chart" aria-hidden="true">
+            <div class="pvc-bars">
+              <div class="pvc-bar" style="--h:55%"></div>
+              <div class="pvc-bar" style="--h:80%"></div>
+              <div class="pvc-bar" style="--h:40%"></div>
+              <div class="pvc-bar" style="--h:100%"></div>
+              <div class="pvc-bar" style="--h:65%"></div>
+              <div class="pvc-bar" style="--h:88%"></div>
+              <div class="pvc-bar" style="--h:70%"></div>
+            </div>
+            <svg class="pvc-line" viewBox="0 0 200 80" preserveAspectRatio="none">
+              <polyline points="10,65 40,40 70,55 100,15 130,30 160,20 190,35" fill="none" stroke="url(#pl)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="pl" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#0ea5e9"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <h3>AI Prediction System</h3>
+            <p>ML platform forecasting business outcomes with high accuracy using historical patterns.</p>
+            <div class="proj-tags"><span>Python</span><span>TensorFlow</span><span>FastAPI</span><span>React</span></div>
+          </div>
+          <div class="proj-hover-overlay">View Project →</div>
+        </div>
+
+        <div class="proj-card reveal-up d2" id="proj-2">
+          <div class="proj-visual pv-shield" aria-hidden="true">
+            <svg viewBox="0 0 80 90" fill="none">
+              <path d="M40 5L10 16v20c0 22 14 38 30 44 16-6 30-22 30-44V16L40 5z" stroke="url(#sh)" stroke-width="1.8"/>
+              <path d="M28 45l8 8 16-16" stroke="url(#sh)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="sh" x1="0" y1="0" x2="80" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="shield-ping" aria-hidden="true"></div>
+          </div>
+          <div class="proj-body">
+            <h3>Secure Encryption Platform</h3>
+            <p>End-to-end encryption infrastructure for healthcare and financial data.</p>
+            <div class="proj-tags"><span>AES-256</span><span>Node.js</span><span>PostgreSQL</span></div>
+          </div>
+          <div class="proj-hover-overlay">View Project →</div>
+        </div>
+
+        <div class="proj-card reveal-up d3" id="proj-3">
+          <div class="proj-visual pv-dash" aria-hidden="true">
+            <div class="pvd-grid">
+              <div class="pvd-box pvd-wide"><div class="pvd-inner"></div></div>
+              <div class="pvd-box"><div class="pvd-inner"></div></div>
+              <div class="pvd-box"><div class="pvd-inner"></div></div>
+              <div class="pvd-box"><div class="pvd-inner"></div></div>
+              <div class="pvd-box pvd-wide2"><div class="pvd-inner"></div></div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <h3>Automation Dashboard</h3>
+            <p>Real-time control center for monitoring distributed automated workflows.</p>
+            <div class="proj-tags"><span>Vue.js</span><span>WebSockets</span><span>Redis</span></div>
+          </div>
+          <div class="proj-hover-overlay">View Project →</div>
+        </div>
+
+        <div class="proj-card reveal-up d4" id="proj-4">
+          <div class="proj-visual pv-doc" aria-hidden="true">
+            <div class="pvdoc-page">
+              <div class="pvdoc-line" style="--w:75%"></div>
+              <div class="pvdoc-line" style="--w:55%"></div>
+              <div class="pvdoc-line" style="--w:90%"></div>
+              <div class="pvdoc-line" style="--w:45%"></div>
+              <div class="pvdoc-line" style="--w:80%"></div>
+              <div class="pvdoc-scanner"></div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <h3>Smart Doc Analyzer</h3>
+            <p>NLP-powered extraction and classification of unstructured documents at scale.</p>
+            <div class="proj-tags"><span>NLP</span><span>spaCy</span><span>OCR</span><span>AWS</span></div>
+          </div>
+          <div class="proj-hover-overlay">View Project →</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section id="process" class="section process-section" aria-label="Our process">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow reveal-up">Process</p>
+        <h2 class="section-h2 reveal-up d1">How We Work</h2>
+        <p class="section-sub reveal-up d2">Transparent, collaborative, results-driven.</p>
+      </div>
+      <div class="process-row">
+
+        <div class="proc-step reveal-up d1">
+          <div class="proc-n" aria-hidden="true">
+            <span>01</span>
+            <div class="proc-line"></div>
+          </div>
+          <div class="proc-body">
+            <div class="proc-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <circle cx="15" cy="13" r="6" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6 26c0-5 4-8 9-8s9 3 9 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Understand</h3>
+            <p>Deep discovery — we map your challenges, goals, and systems before writing a line of code.</p>
+          </div>
+        </div>
+
+        <div class="proc-step reveal-up d2">
+          <div class="proc-n" aria-hidden="true">
+            <span>02</span>
+            <div class="proc-line"></div>
+          </div>
+          <div class="proc-body">
+            <div class="proc-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Design</h3>
+            <p>Architecture blueprints and AI model selection shaped precisely around your requirements.</p>
+          </div>
+        </div>
+
+        <div class="proc-step reveal-up d3">
+          <div class="proc-n" aria-hidden="true">
+            <span>03</span>
+            <div class="proc-line"></div>
+          </div>
+          <div class="proc-body">
+            <div class="proc-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M8 20l4-8 4 4 4-10 4 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="3" y="3" width="26" height="26" rx="3" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3>Develop</h3>
+            <p>Agile sprints with continuous delivery and seamless integration into your existing stack.</p>
+          </div>
+        </div>
+
+        <div class="proc-step reveal-up d4">
+          <div class="proc-n" aria-hidden="true">
+            <span>04</span>
+          </div>
+          <div class="proc-body">
+            <div class="proc-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M16 4v6M16 22v6M4 16h6M22 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3>Deploy & Optimise</h3>
+            <p>Production launch with monitoring, performance tuning, and continuous improvement.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section id="trust" class="section trust-section" aria-label="Client testimonials">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow reveal-up">Testimonials</p>
+        <h2 class="section-h2 reveal-up d1">Trusted by Teams<br/>Around the World</h2>
+      </div>
+      <div class="testi-marquee-wrap" aria-hidden="true">
+        <div class="testi-marquee">
+          <span>NovaTech</span><span>ClearVault</span><span>MediCore AI</span>
+          <span>DataSpire</span><span>SwiftOps</span><span>Nexus Labs</span>
+          <span>NovaTech</span><span>ClearVault</span><span>MediCore AI</span>
+          <span>DataSpire</span><span>SwiftOps</span><span>Nexus Labs</span>
+        </div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal-up d1">
+          <div class="tc-quote-mark" aria-hidden="true">"</div>
+          <p>"Automyx transformed our data pipeline. What took 3 days now runs automatically in minutes. The ROI was immediate."</p>
+          <div class="tc-person">
+            <div class="tc-av" aria-hidden="true">R</div>
+            <div>
+              <div class="tc-name">Raj Mehta</div>
+              <div class="tc-role">CTO, DataSpire</div>
+            </div>
+            <div class="tc-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="testi-card reveal-up d2">
+          <div class="tc-quote-mark" aria-hidden="true">"</div>
+          <p>"Their encryption platform gave us the compliance confidence to expand into healthcare. Exceptional architecture."</p>
+          <div class="tc-person">
+            <div class="tc-av" aria-hidden="true">S</div>
+            <div>
+              <div class="tc-name">Sarah Lin</div>
+              <div class="tc-role">Head of Security, MediCore AI</div>
+            </div>
+            <div class="tc-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="testi-card reveal-up d3">
+          <div class="tc-quote-mark" aria-hidden="true">"</div>
+          <p>"The smart document analyzer cut our manual processing by 90%. They understood exactly what we needed."</p>
+          <div class="tc-person">
+            <div class="tc-av" aria-hidden="true">A</div>
+            <div>
+              <div class="tc-name">Alex Torres</div>
+              <div class="tc-role">Operations Lead, SwiftOps</div>
+            </div>
+            <div class="tc-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section id="cta" class="section cta-section" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-box reveal-scale">
+        <div class="cta-bg-arc" aria-hidden="true"></div>
+        <p class="section-eyebrow light">Let's Work Together</p>
+        <h2 class="cta-h2">Ready to Automate<br/><span>Your Business?</span></h2>
+        <p class="cta-sub">Let's build something intelligent together.</p>
+        <a href="#contact" class="btn-primary lg" id="cta-btn">Contact Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section" aria-label="Contact Automyx">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-h2">Let's Build<br/>Something Great</h2>
+          <p class="section-body">Ready to start your AI journey? Reach out and let's talk about your project.</p>
+          <div class="contact-info">
+            <a href="mailto:contact@automyx.ai" class="ci-row">
+              <div class="ci-ic" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h14c.6 0 1 .4 1 1v10c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V5c0-.6.4-1 1-1z"/><path d="m2 5 8 6 8-6"/></svg>
+              </div>
+              <span>contact@automyx.ai</span>
+            </a>
+            <div class="ci-row">
+              <div class="ci-ic" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/><path d="M10 2a8 8 0 0 1 8 8c0 5.5-8 10-8 10S2 15.5 2 10a8 8 0 0 1 8-8z"/></svg>
+              </div>
+              <span>Global · Remote-First</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="soc-btn" id="s-linkedin" aria-label="LinkedIn">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M16 8a5 5 0 0 1 5 5v6h-3v-6a2 2 0 0 0-4 0v6h-3v-6a5 5 0 0 1 5-5zM2 9h3v10H2zM3.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+              LinkedIn
+            </a>
+            <a href="#" class="soc-btn" id="s-github" aria-label="GitHub">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 10 4.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 20 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form id="contact-form" novalidate aria-label="Contact form">
+            <div class="fg">
+              <label for="cf-name">Full Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="fg">
+              <label for="cf-email">Email Address</label>
+              <input type="email" id="cf-email" name="email" placeholder="you@company.com" autocomplete="email" required />
+            </div>
+            <div class="fg">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="fg">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell us about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full" id="form-submit">
+              <span>Send Message</span>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M18 2L9 11M18 2l-5 15-4-6-6-4 15-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div id="form-msg" class="form-msg" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon sm" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="14" stroke="url(#fg)" stroke-width="1.5"/>
+                <path d="M10 16 L16 10 L22 16 L16 22 Z" fill="url(#fg)" opacity="0.8"/>
+                <circle cx="16" cy="16" r="3" fill="white"/>
+                <defs>
+                  <linearGradient id="fg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span>Automyx</span>
+          </div>
+          <p>Automating Intelligence.<br/>Securing the Future.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn" class="fs">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M16 8a5 5 0 0 1 5 5v6h-3v-6a2 2 0 0 0-4 0v6h-3v-6a5 5 0 0 1 5-5zM2 9h3v10H2zM3.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+            </a>
+            <a href="#" aria-label="GitHub" class="fs">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 10 4.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 20 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#process">Process</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">AI Automation</a></li>
+            <li><a href="#services">Web Applications</a></li>
+            <li><a href="#services">Data Security</a></li>
+            <li><a href="#services">Custom AI</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="mailto:contact@automyx.ai">contact@automyx.ai</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="yr"></span> Automyx. All rights reserved.</p>
+        <p>Crafted with precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Chat Widget -->
+  <div id="chat-widget" role="button" tabindex="0" aria-label="AI Assistant – click to contact us">
+    <div class="cw-ring" aria-hidden="true"></div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      <circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/>
+      <circle cx="12" cy="10" r="1" fill="currentColor" stroke="none"/>
+      <circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+    <div class="cw-label">Chat with AI</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
