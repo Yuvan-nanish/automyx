@@ -1,1 +1,1 @@
-this is a testing portfolio website for a start up name "AUTOMYX"
+this is a testing portfolio website for a start up named "AUTOMYX"
